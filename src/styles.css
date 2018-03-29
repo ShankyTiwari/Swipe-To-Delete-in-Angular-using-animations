@@ -5,6 +5,10 @@ body {
     margin: 0;
 }
 
+.example-sidenav-container > .mat-drawer-content {
+  overflow-x: hidden !important;
+}
+
 .my-list-item.mat-list-item > .mat-list-item-content {
     padding: 0px !important;
 }
