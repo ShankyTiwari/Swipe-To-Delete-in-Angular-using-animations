@@ -1,13 +1,16 @@
 .delete-indicator{
 	line-height: 58px;
-    height: 99%;
+    height: 97%;
     width: 100%;
     background-color: red;
     position: absolute;
-    padding-left: 16px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .delete-icon{
+    margin-left: 16px;
+    margin-right: 16px;
     font-size: 30px !important;
     line-height: 48px !important;
 }
