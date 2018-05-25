@@ -24,6 +24,7 @@ export class NotesComponent implements OnInit {
 	ngOnInit() { }
 
 	panend(action, index) {
+    console.log('Pan End');
 		const currentMargin = this.getLeftPosition(action);
 		if (currentMargin > 15) {
 			this.itemsNotes.splice(index, 1);
@@ -33,6 +34,7 @@ export class NotesComponent implements OnInit {
 	}
 
 	panright(action) {
+    console.log('Pan Start');
 		action.target.style.left = action.deltaX + 'px';
 	}
 
