@@ -1,13 +1,18 @@
 <h2 class="app-title">
 	Notes
 </h2>
-<div>
+<div class="main-canvas">
 	<mat-list [@listAnimation]="itemsNotes.length">
-		<mat-list-item class="my-list-item" *ngFor="let item of itemsNotes;let i = index">
+		<mat-list-item class="my-list-item" *ngFor="let item of itemsNotes;let i = index" >
 			<div class="delete-indicator">
 				<i class="material-icons delete-icon">delete_sweep</i>
+				<i class="material-icons delete-icon">delete_sweep</i>
 			</div>
-			<div class="item-container" (panend)="panend($event,i)" (panright)="panright($event,i)">
+			<div class="item-container"
+				(panend)="panend($event,i)" 
+				(panmove)="panmove($event,i)"
+				 [@slideLeft]="indexNumber === i"
+				 (@slideLeft.done)=alignComplete($event)>
 				{{item}}
 			</div>
 			<mat-divider></mat-divider>
