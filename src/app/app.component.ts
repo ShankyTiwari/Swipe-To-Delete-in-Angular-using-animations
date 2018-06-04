@@ -1,13 +1,13 @@
-import { MediaMatcher } from '@angular/cdk/layout';
-import { ChangeDetectorRef, Component, OnDestroy } from '@angular/core';
-import { NotesComponent } from './components/notes/notes.component';
+import { Component } from '@angular/core';
 
 @Component({
 	selector: 'app-root',
 	templateUrl: './app.component.html',
 	styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
+	typeOfList = 'simplelist';
 	outgoingdata = [
 		{
 			title: 'Iron Man',
@@ -108,13 +108,34 @@ export class AppComponent {
 		}
 	];
 	config = {
+		listType: 'simplelist',
+		slideThreshold: 12,
+		numberOfDeleteIcon: 1,
+		disableWarnings: false,
+		classname: 'my-custom-class'
+	};
+	config2 = {
+		listType: 'multiline',
+		slideThreshold: 12,
+		numberOfDeleteIcon: 1,
+		disableWarnings: false,
+		classname: 'my-custom-class'
+	};
+	config3 = {
 		listType: 'listwithicon',
 		slideThreshold: 12,
 		numberOfDeleteIcon: 1,
 		disableWarnings: false,
 		classname: 'my-custom-class'
 	};
-	constructor() { }
+	config4 = {
+		listType: 'listwithimage',
+		slideThreshold: 12,
+		numberOfDeleteIcon: 1,
+		disableWarnings: false,
+		classname: 'my-custom-class'
+	};
+	constructor() {}
 
 	deletedItem(event) {
 		console.log(event);

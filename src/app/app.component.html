@@ -1,3 +1,18 @@
-<div class="example-container">
-	<ng-swipe-to-delete [configuration]='config' [items]='outgoingdata' (deletedItem)='deletedItem($event)'></ng-swipe-to-delete>
+<div class="buttons">
+	<button mat-button (click)="typeOfList = 'simplelist' ">Simple List</button>
+	<button mat-button (click)="typeOfList = 'multiline' ">Multiline List</button>
+</div>
+<div class="buttons">
+	<button mat-button (click)="typeOfList = 'listwithicon' ">List with Icons</button>
+	<button mat-button (click)="typeOfList = 'listwithimage' ">List with Images</button>
+</div>
+<div class="container">
+	<ng-swipe-to-delete *ngIf="config.listType === typeOfList" [configuration]='config' [items]='outgoingdata' (deletedItem)='deletedItem($event)'>
+	</ng-swipe-to-delete>
+	<ng-swipe-to-delete *ngIf="config2.listType === typeOfList" [configuration]='config2' [items]='outgoingdata' (deletedItem)='deletedItem($event)'>
+	</ng-swipe-to-delete>
+	<ng-swipe-to-delete *ngIf="config3.listType === typeOfList" [configuration]='config3' [items]='outgoingdata' (deletedItem)='deletedItem($event)'>
+	</ng-swipe-to-delete>
+	<ng-swipe-to-delete *ngIf="config4.listType === typeOfList" [configuration]='config4' [items]='outgoingdata' (deletedItem)='deletedItem($event)'>
+	</ng-swipe-to-delete>
 </div>
