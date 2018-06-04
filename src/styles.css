@@ -1,21 +1,2 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
-body { 
-    font-family: Roboto, Arial, sans-serif;
-    margin: 0;
-}
-
-.example-sidenav-container > .mat-drawer-content {
-  overflow-x: hidden !important;
-}
-
-.my-list-item.mat-list-item > .mat-list-item-content {
-    padding: 0px !important;
-}
-
-
-mat-icon.size-45 {
-    font-size: 45px;
-    height: 45px;
-    width: 45px;
-}
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
